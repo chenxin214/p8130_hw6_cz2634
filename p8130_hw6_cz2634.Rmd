@@ -116,10 +116,10 @@ $$F = \frac{SSR_{L}-SSR_{S}/(df_{L}-dS_{S})}{SSE_{L}/df_{L}}=3.6 $$
 \ $$F_{1-\alpha,df_L - df_S,df_L} = 4.07$$
   
 Get the value of F statistic and F critic from R code:
-```{r echo = TRUE}
+```{r echo = TRUE, include = FALSE}
 pat_df_lm2 = lm(satisfaction ~ age + severity, pat_df)
 anova(pat_df_lm,pat_df_lm2)$F #F=3.6
-qf(0.95,1,42)#4.07
+qf(0.95,1,42) #F= 4.07
 ```
   
 **Decision Rule**  

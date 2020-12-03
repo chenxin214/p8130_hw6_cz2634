@@ -491,11 +491,6 @@ summary {
 <p> model 1: without anxiety as predictor <span class="math display">\[statisfaction=\beta_{0}+\beta_{1}age+\beta_{2}severity+ \varepsilon_{i}\]</span>  model 2: with anxirty as predictor <span class="math display">\[statisfaction=\beta_{0}+\beta_{1}age+\beta_{2}severity+\beta_{3}anciety+\varepsilon_{i}\]</span><br />
 <strong>statistics</strong> <span class="math display">\[F = \frac{SSR_{L}-SSR_{S}/(df_{L}-dS_{S})}{SSE_{L}/df_{L}}=3.6 \]</span>  <span class="math display">\[F_{1-\alpha,df_L - df_S,df_L} = 4.07\]</span></p>
 <p>Get the value of F statistic and F critic from R code:</p>
-<pre class="r"><code>pat_df_lm2 = lm(satisfaction ~ age + severity, pat_df)
-anova(pat_df_lm,pat_df_lm2)$F #F=3.6
-## [1]  NA 3.6
-qf(0.95,1,42)#4.07
-## [1] 4.07</code></pre>
 <p><strong>Decision Rule</strong></p>
 <p> <span class="math inline">\(Reject ~ H_0 ~ if ~ F&gt;F_{1-\alpha,df_L - df_S,df_L}\)</span></p>
 <p> <span class="math inline">\(Fail ~ reject ~ H_0 ~ if ~F&lt;F_{1-\alpha, df_L - df_S,df_L}\)</span></p>
